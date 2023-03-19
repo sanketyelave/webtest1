@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SANKETS PAGE</title>
+    <style>
+    *{
+        
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+    body{
+        background-color:rgb(254, 254, 201);
+        border:dashed rgb(119, 209, 94);
+         }
+        nav{    
+               background-color: rgb(115, 35, 190);
+               display: flex;
+               justify-content: space-between;
+               padding: 10px 20px;
+               color: rgb(16, 15, 15);
+               font-family: cursive ;
+            }   
+        ul {
+               justify-content: center;
+               display: flex;
+               text-decoration:overline;
+               color: black;
+            }
+        li:hover{
+                color: blanchedalmond;
+                }
+          li{
+                 padding-left: 10px;
+                 padding-right: 30px;
+             }
+         p{
+                 text-align: center;
+                 color: black;
+                 font-family: Georgia, 'Times New Roman', Times, serif ;
+                 padding:40px 50px 50px 50px;
+                 font-size: 50px;
+                 text-decoration:double;
+         
+       } 
+        button{
+            position: relative;
+            top:50%;
+            left:35%;
+            padding: 15px 25px 15px 15px;
+            font-size: 15px;
+            cursor: pointer;
+            display: inline-flex;
+            color:rgb(145, 239, 131);
+            background-color: blueviolet;
+            margin-top: 20px;
+            border-radius: 25% 10%;
+        }
+        button:hover
+        {
+            background:#c3e2b9;
+            color: #fff;
+            text-decoration: underline;
+        }
+        #current-time{
+            position: absolute;
+            top: 2.5%;
+            left:2.3%;
+            text-align: center;
+            color: aquamarine;
+        }
+        footer{
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            margin-top: 118px;
+        }
+        h1{
+            padding-left: 400px;
+        }
+        .time{
+            position: absolute;
+            bottom: 93.5%;
+            left: 0.5%;
+            
+            
+        }
+        
+    </style>
+    
+</head>
+<body>
+
+    <nav> 
+    <h1 id="sanket"><strong> FIRST CLICK ⏩ AND CHANGE ME  </strong> </h1>
+    <ul>
+    <li> <a href="" style="color: black;"> Home </a></li>
+    <li>  <a href="http://127.0.0.1:5500/WEB%20WIZ/final.html" style="color: black;">About</a> </li>
+    <li>  <a href="" style="color: black;">Contact</a></li>
+    <li>  <a href="" style="color:black;">Help</a></li>
+    </ul>
+    </nav>
+<div id="web">
+   
+      
+    <p class="text">  Hi and welcome to my webpage <br>
+        Apology for being bit late but <br>
+        CAN i get a CHANCE to join the club <br>
+       ! YES this is MY paragraph <br>
+    </p>
+
+    <button onclick="sayHellow()" style="margin-right: 30px;">🙏Promote</button>
+    <script>
+     function sayHellow() {
+         alert("WELCOME !!")}
+    </script> 
+        
+     <button onclick="myFunction()">💥ChangeBG</button>
+     <script>
+      function myFunction() {
+         document.getElementById("web").style.backgroundColor = "#9E4784";
+      }
+     </script>
+    
+     <button onclick="dow()" class="head" style="margin-left: 30px;padding-right: 15px;">⏩Change heading</button>
+     <script>
+      function dow(){
+         document.getElementById("sanket").innerHTML= " &#127882; WELCOME TO THE WEB PAGE &#127882;";
+        } 
+        
+     </script>
+          <footer>
+            © This is footer
+        </footer> 
+    </div>
+        
+            <h2 id="current-time">12:17:10 pm</h2>
+
+     <script>
+        let date=document.getElementById("current-date");
+        let time= document.getElementById("current-time");
+        setInterval(()=>{
+             let d= new Date();
+        time.innerHTML =d.toLocaleTimeString();
+         },1000) 
+     </script>
+     <div id="emoji">
+        <div class="time">
+                ⏳
+        </div>
+     </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
